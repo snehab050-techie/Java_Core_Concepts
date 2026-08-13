@@ -15,3 +15,9 @@ Processes are usually independent, while threads exist as subsets of a process
 
 A process is an independent program in execution with its own separate memory space
 A thread is a smaller unit of execution within that process.
+
+There are mainly two ways implement MultiThreading in Java
+----------------------------------
+
+1. By extending Thread class
+2. By implementing Runnable interface (Recommended way)
