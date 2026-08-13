@@ -1,0 +1,17 @@
+
+Thread
+-------
+
+Thread is the smallest execution unit in a program
+
+OR
+
+Thread is a worker that performs a task inside our application
+
+Process
+--------
+
+Processes are usually independent, while threads exist as subsets of a process
+
+A process is an independent program in execution with its own separate memory space
+A thread is a smaller unit of execution within that process.
