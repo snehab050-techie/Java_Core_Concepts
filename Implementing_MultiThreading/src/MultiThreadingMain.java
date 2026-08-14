@@ -12,9 +12,13 @@ public class MultiThreadingMain {
 
         //starting 5 threads parallel
         //All 5 threads will print numbers at the same time
-        for(int i=1;i<=5;i++){
+        for(int i=0;i<5;i++){
             MultiThreadThing threads = new MultiThreadThing(i);
-            threads.start();
+            Thread t = new Thread(threads);
+            t.start();
         }
+
+        //Even if we have exception in our main thread - it won't stop other threads from stop working
+//        throw new RuntimeException();
     }
 }
