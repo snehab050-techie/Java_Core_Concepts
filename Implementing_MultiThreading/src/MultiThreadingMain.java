@@ -16,6 +16,19 @@ public class MultiThreadingMain {
             MultiThreadThing threads = new MultiThreadThing(i);
             Thread t = new Thread(threads);
             t.start();
+
+            //Tests is this thread is alive - A thread is alive if it has been started and has not yet terminated
+            boolean isAlive = t.isAlive();
+
+            try{
+                t.join();
+                // Waits for this thread to terminate
+                // Terminates other threads - until the first thread finishes its execution
+                System.out.println(isAlive);
+            }
+            catch(InterruptedException e){
+                e.printStackTrace();
+            }
         }
 
         //Even if we have exception in our main thread - it won't stop other threads from stop working
