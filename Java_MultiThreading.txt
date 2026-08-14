@@ -16,8 +16,55 @@ Processes are usually independent, while threads exist as subsets of a process
 A process is an independent program in execution with its own separate memory space
 A thread is a smaller unit of execution within that process.
 
+Why do we need threads?
+
+Threads make run application faster by executing tasks simultaneously
+
+Response becomes faster - the user don't have to wait for longer time
+
 There are mainly two ways implement MultiThreading in Java
 ----------------------------------
 
 1. By extending Thread class
 2. By implementing Runnable interface (Recommended way)
+
+Every Java program starts with one thread - main() thread
+We create another thread inside main - now java has multiple workers
+We can have many number of threads (as per system resources)
+
+Race condition : Multiple threads try to modify the same data simultaneously
+
+To solve this race problem - Synchronization was introduced - which says only thread can enter(modify data) at a time
+
+Volatile keyword - ensures that when one thread updates a variable, all other threads immediately see the latest value.
+                   It guarantees visibility but not atomicity.
+
+                   Each thread may keep its own cached copy of a variable for speed
+                   If one thread changes the variable value,but another thread may still read the old value - not in sync
+
+                   volatile tells Java: "Don't let threads use stale cached values for this variable. Always read the latest value from shared memory."
+
+-------------------------------
+
+1) What is a Thread?
+A thread is the smallest unit of execution within a process.
+Multiple threads allow different tasks to run concurrently, making applications more responsive and efficient.
+
+2) Why do we use Threads?
+Threads improve performance by allowing multiple tasks to execute concurrently.
+For example, in a web application, one thread can handle a user request while another sends an email or writes logs,
+so users don't have to wait unnecessarily.
+
+3) Difference between Process and Thread
+Process	                                   Thread
+Independent program	                   Part of a process
+Has its own memory	                     Shares memory with other threads in the same process
+Heavyweight	                             Lightweight
+Communication is slower	               Communication is faster because memory is shared
+
+4) What is Multithreading?
+Running multiple threads within the same process to perform multiple tasks concurrently.
+
+5) What is volatile?
+volatile ensures that when one thread updates a variable, all other threads immediately see the latest value.
+It guarantees visibility.

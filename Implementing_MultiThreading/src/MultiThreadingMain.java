@@ -18,13 +18,13 @@ public class MultiThreadingMain {
             t.start();
 
             //Tests is this thread is alive - A thread is alive if it has been started and has not yet terminated
-            boolean isAlive = t.isAlive();
+//            boolean isAlive = t.isAlive();
 
             try{
                 t.join();
                 // Waits for this thread to terminate
                 // Terminates other threads - until the first thread finishes its execution
-                System.out.println(isAlive);
+//                System.out.println(isAlive);
             }
             catch(InterruptedException e){
                 e.printStackTrace();
