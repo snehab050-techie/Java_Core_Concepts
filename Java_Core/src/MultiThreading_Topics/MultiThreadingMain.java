@@ -1,3 +1,5 @@
+package MultiThreading_Topics;
+
 public class MultiThreadingMain {
     static void main() {
 //        MultiThreadThing thread1 = new MultiThreadThing();

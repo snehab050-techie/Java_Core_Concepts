@@ -68,3 +68,37 @@ Running multiple threads within the same process to perform multiple tasks concu
 5) What is volatile?
 volatile ensures that when one thread updates a variable, all other threads immediately see the latest value.
 It guarantees visibility.
+
+6) What is deadlock?
+Deadlock is a situation in multithreading where two or more threads are permanently waiting for locks or resources held by each other.
+As a result, none of the threads can proceed. It commonly occurs when multiple locks are acquired in different orders.
+
+For example, Thread 1 acquires Lock A and waits for Lock B, while Thread 2 has Lock B and waits for Lock A.
+              Both threads keep waiting, resulting in a deadlock.
+
+7) How do you prevent deadlock?
+We can prevent deadlock by acquiring locks in a consistent order, avoiding unnecessary locks,
+keeping critical sections small, and using mechanisms such as tryLock() from Lock API where appropriate.
+
+Deadlock explained in simple terms
+------------------------------------
+
+Think of two people and two keys.
+
+    Person A has Key 1 and wants Key 2.
+
+    Person B has Key 2 and wants Key 1.
+
+Both say:
+
+"I'll give you mine once you give me yours."
+
+Nobody gives anything.
+
+Nobody moves.
+
+That's DEADLOCK.
+
+One-line memory: "I have what you need, and you have what I need."
+
+A lock is like a key that a thread needs before entering a protected section of code.
