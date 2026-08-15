@@ -18,3 +18,41 @@
        -------------------------------------
        |
    CompletableFuture
+
+
+Level 1 — Foundation
+Lambda expressions
+Functional interfaces
+Predicate
+Consumer
+Supplier
+Function
+Method references
+
+Level 2 — Most important
+Stream API
+filter()
+map()
+sorted()
+distinct()
+limit()
+forEach()
+collect()
+reduce()
+findFirst()
+anyMatch(), allMatch(), noneMatch()
+
+Level 3
+Optional
+orElse()
+orElseGet()
+orElseThrow()
+
+Level 4
+Default methods
+Static methods in interfaces
+Date/Time API
+
+Level 5
+CompletableFuture
+
