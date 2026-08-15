@@ -1,0 +1,20 @@
+                    JAVA 8
+                       |
+       -------------------------------------
+       |          |          |             |
+    Lambda    Functional   Stream       Optional
+              Interface      API
+       |
+   Method Reference
+
+       -------------------------------------
+       |
+   Default/Static methods in interfaces
+
+       -------------------------------------
+       |
+   New Date & Time API
+
+       -------------------------------------
+       |
+   CompletableFuture
