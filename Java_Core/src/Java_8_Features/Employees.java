@@ -30,6 +30,12 @@ public class Employees {
         //Lot of complexities
         // So, Java 8 introduced a functional way of programming
 
+        //get names starting with S
+        names.stream()
+                .filter(n -> n.startsWith("S"))
+                .forEach(System.out::println);
+
         Collections.sort(names, (a,b)-> a.compareTo(b));
+        System.out.println(names);
     }
 }
