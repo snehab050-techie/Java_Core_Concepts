@@ -56,3 +56,41 @@ Date/Time API
 Level 5
 CompletableFuture
 
+------------------------------
+Lambda Expressions
+
+A lambda is basically a short way of writing a function/behaviour without creating a separate method or anonymous class.
+
+Syntax:
+    (parameters) -> expression
+
+Eg:   (a,b) -> (a+b)   //take a and b and return a+b
+      name -> name.toUpperCase() //Take a name and convert it to uppercase
+
+      Multiple statements:
+
+         name -> {
+             System.out.println(name);
+             return name.toUpperCase();
+         }
+
+Imp!!!!!
+A lambda does not exist independently.
+It needs a Functional Interface.
+
+--------------------------------
+
+Functional Interface
+
+A functional interface is an interface that contains exactly one abstract method
+
+@FunctionalInterface
+interface Calculator{
+    int calculate(int a,int b);
+}
+
+Calculator addition = (a,b) -> (a+b);
+System.out.println(addition.calculate(10,20));
+
+
+
