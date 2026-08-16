@@ -92,5 +92,18 @@ interface Calculator{
 Calculator addition = (a,b) -> (a+b);
 System.out.println(addition.calculate(10,20));
 
+---------------------------------------------
+Method referencing in Java - ::
+
+MR helps us to use existing methods in a cleaner shorter way
+
+Eg:
+
+1. Without method referencing
+list.stream().map(name -> name.toUpperCase());
+
+2. With methods referencing
+list.stream().map(String::toUpperCase);
+
 
 

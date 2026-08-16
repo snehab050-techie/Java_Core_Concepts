@@ -37,5 +37,9 @@ public class Employees {
 
         Collections.sort(names, (a,b)-> a.compareTo(b));
         System.out.println(names);
+
+        //Method referencing
+        names.stream().map(name -> name.toUpperCase()).forEach(System.out::println);
+        names.stream().map(String::toUpperCase).forEach(System.out::println);
     }
 }
