@@ -199,3 +199,39 @@ Convert to uppercase:
 Result:
 
         [SNEHA, RAHUL, AMIT]
+
+filter() is used to select elements based on a condition,
+whereas map() is used to transform each element into another form.
+
+Sorted() :
+Sort elements.
+
+numbers.stream()
+       .sorted()
+       .forEach(System.out::println);
+
+Descending:
+
+numbers.stream()
+       .sorted(Comparator.reverseOrder())
+       .forEach(System.out::println);
+
+distinct()
+
+Remove duplicates.
+
+List<Integer> numbers =
+        Arrays.asList(10, 20, 10, 30, 20);
+
+Then:
+
+numbers.stream()
+       .distinct()
+       .forEach(System.out::println);
+
+       Output:
+
+       10
+       20
+       30
+
