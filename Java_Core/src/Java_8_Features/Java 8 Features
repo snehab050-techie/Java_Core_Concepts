@@ -160,3 +160,42 @@ Java: employees.stream()
                .collect(...);
 
 That's a Stream pipeline.
+
+
+filter() means:
+
+Keep only elements satisfying a condition.
+
+Example:
+
+List<Integer> numbers =
+        Arrays.asList(10, 15, 20, 25, 30);
+
+List<Integer> result =
+        numbers.stream()
+               .filter(n -> n > 20)
+               .collect(Collectors.toList());
+
+Result:
+
+[25, 30]
+
+map() means:
+
+Transform each element into something else.
+
+Example:
+
+List<String> names =
+        Arrays.asList("sneha", "rahul", "amit");
+
+Convert to uppercase:
+
+        List<String> result =
+                names.stream()
+                     .map(name -> name.toUpperCase())
+                     .collect(Collectors.toList());
+
+Result:
+
+        [SNEHA, RAHUL, AMIT]
