@@ -235,3 +235,26 @@ numbers.stream()
        20
        30
 
+limit()
+
+Take only a certain number.
+
+numbers.stream()
+       .limit(3)
+       .forEach(System.out::println);
+
+
+skip()
+
+Skip elements.
+
+numbers.stream()
+       .skip(2)
+       .forEach(System.out::println);
+
+forEach()
+
+Perform an action for every element.
+
+numbers.stream()
+       .forEach(System.out::println);
