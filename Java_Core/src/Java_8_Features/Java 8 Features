@@ -105,5 +105,58 @@ list.stream().map(name -> name.toUpperCase());
 2. With methods referencing
 list.stream().map(String::toUpperCase);
 
+------------------------------------------------
 
+Stream API
 
+A Stream is NOT a data structure.
+
+It doesn't store data.
+
+Instead:
+
+A Stream is a way of processing data.
+
+Suppose:
+
+List<Integer> numbers =
+        Arrays.asList(10, 20, 30, 40, 50);
+
+You want numbers greater than 25.
+
+Without Stream:
+    for(Integer number : numbers) {
+        if(number > 25) {
+            System.out.println(number);
+        }
+    }
+
+With Stream:
+    numbers.stream()
+           .filter(number -> number > 25)
+           .forEach(System.out::println);
+
+Output:
+        30
+        40
+        50
+
+Imagine an office processing employees:
+
+Employees
+   ↓
+Filter
+   ↓
+Transform
+   ↓
+Sort
+   ↓
+Collect
+
+Java: employees.stream()
+               .filter(...)
+               .map(...)
+               .sorted(...)
+               .collect(...);
+
+That's a Stream pipeline.
