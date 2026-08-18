@@ -312,3 +312,30 @@ Using: reduce()
        Reduce many values into one value.
 
 10 20 30 40 -> 100
+
+Stream operations: memorize this classification
+Intermediate operations
+
+They return another Stream.
+
+filter
+map
+sorted
+distinct
+limit
+skip
+
+Example: stream() .filter(...) .map(...) .sorted(...)
+
+Terminal operations
+
+They finish the Stream.
+
+forEach
+collect
+reduce
+count
+findFirst
+anyMatch
+allMatch
+noneMatch
