@@ -258,3 +258,29 @@ Perform an action for every element.
 
 numbers.stream()
        .forEach(System.out::println);
+
+collect()
+
+This is extremely important.
+
+Streams process data, but eventually you often want the result as a:
+
+List
+Set
+Map
+
+Example:
+
+List<Integer> result =
+        numbers.stream()
+
+filter(n -> n > 20)
+               .collect(Collectors.toList());
+
+So:
+
+Stream processing
+       ↓
+collect()
+       ↓
+List
