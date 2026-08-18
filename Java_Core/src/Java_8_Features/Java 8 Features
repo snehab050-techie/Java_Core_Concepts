@@ -284,3 +284,31 @@ Stream processing
 collect()
        ↓
 List
+
+reduce()
+
+This is another important interview topic.
+
+Suppose:
+
+List<Integer> numbers =
+        Arrays.asList(10, 20, 30, 40);
+
+You want:
+
+10 + 20 + 30 + 40
+
+Using: reduce()
+       int sum =
+           numbers.stream()
+                  .reduce(0, (a, b) -> a + b);
+
+       Result:
+
+       100
+
+       Think:
+
+       Reduce many values into one value.
+
+10 20 30 40 -> 100
