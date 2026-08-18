@@ -339,3 +339,34 @@ findFirst
 anyMatch
 allMatch
 noneMatch
+
+----------------------------------------
+
+Lazy Evaluation
+
+Consider:
+
+numbers.stream()
+       .filter(n -> n > 20)
+       .map(n -> n * 2);
+
+Nothing necessarily happens yet.
+
+Why?
+
+Because:
+
+filter -> intermediate
+map    -> intermediate
+
+We haven't told Java to finish the pipeline.
+
+Then:
+
+.forEach(System.out::println);
+
+is added.
+
+Now processing occurs.
+
+This is called lazy evaluation.
