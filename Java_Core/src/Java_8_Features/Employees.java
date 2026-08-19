@@ -1,12 +1,16 @@
 package Java_8_Features;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Employees {
+
+    private String name = "Sneha";
+
+    public String getName(){
+        return this.name;
+    }
+
     static void main() {
         List<String> names = Arrays.asList("Sneha", "Janaki", "Suhas", "Rahul");
 
@@ -114,5 +118,20 @@ public class Employees {
         int num = nums.stream()
                 .reduce(0, (a, b) -> a + b);
         System.out.println(num);
+
+        //Optional class
+        System.out.println("---------Optional--------");
+        Employees e = new Employees();
+
+        //NPE
+//        System.out.println(e.getName().toUpperCase());
+
+        if(e.getName() != null){
+            System.out.println("Name is not null: "+e.getName());
+        }
+
+        //with optional
+        Optional<String> opt = Optional.ofNullable(e.getName());
+        opt.ifPresent(n-> System.out.println(n.toUpperCase()));
     }
 }

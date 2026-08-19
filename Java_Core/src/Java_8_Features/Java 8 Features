@@ -353,7 +353,6 @@ numbers.stream()
 Nothing necessarily happens yet.
 
 Why?
-
 Because:
 
 filter -> intermediate
@@ -370,3 +369,22 @@ is added.
 Now processing occurs.
 
 This is called lazy evaluation.
+
+---------------------------------------
+
+Optional
+
+Was introduced to help deal with NullPointerException
+
+Before Java 8
+if(name != null){
+
+    System.out.println(name.toUppercase());
+}
+
+Java 8 introduced:
+
+Optional
+to represent:
+
+A value may or may not exist.
