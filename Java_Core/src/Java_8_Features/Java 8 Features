@@ -408,5 +408,9 @@ Note: orElse()
    If value isn't present, throw an exception.
    Very useful in service-layer code.
 
+-------------------------------------------------------
 
+Static & Default Methods in Interfaces
+
+1) Default Methods in Interfaces
 
