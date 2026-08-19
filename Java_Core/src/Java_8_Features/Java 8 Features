@@ -388,3 +388,25 @@ Optional
 to represent:
 
 A value may or may not exist.
+
+1) orElse()
+
+Helps us return a default value when the object is null.
+
+2) orElseGet()
+
+optional.orElseGet(() -> createDefault());
+
+Note: orElse()
+          -> default value is evaluated
+
+      orElseGet()
+          -> default value generated lazily
+
+3) orElseThrow()
+
+   If value isn't present, throw an exception.
+   Very useful in service-layer code.
+
+
+

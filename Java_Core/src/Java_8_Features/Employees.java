@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class Employees {
 
-    private String name = "Sneha";
+    private String name = null;
 
     public String getName(){
         return this.name;
@@ -133,5 +133,18 @@ public class Employees {
         //with optional
         Optional<String> opt = Optional.ofNullable(e.getName());
         opt.ifPresent(n-> System.out.println(n.toUpperCase()));
+
+        // orElse()
+        String name = opt.orElse("Name is null");
+        System.out.println("Name: "+name);
+
+        // orElseGet()
+//        opt.orElseGet(() -> e.getName());
+        opt.orElseGet(e::getName);
+
+        // orElseThrow()
+        System.out.println("Throw an exception if opt is null");
+        String nms = opt.orElseThrow(() -> new RuntimeException("Name not found"));
+        System.out.println(nms);
     }
 }
