@@ -110,11 +110,9 @@ list.stream().map(String::toUpperCase);
 Stream API
 
 A Stream is NOT a data structure.
-
 It doesn't store data.
 
 Instead:
-
 A Stream is a way of processing data.
 
 Suppose:
@@ -162,7 +160,7 @@ Java: employees.stream()
 That's a Stream pipeline.
 
 
-filter() means:
+1) filter() means:
 
 Keep only elements satisfying a condition.
 
@@ -314,7 +312,9 @@ Using: reduce()
 10 20 30 40 -> 100
 
 Stream operations: memorize this classification
-Intermediate operations
+-------------------------------------------------------
+
+1) Intermediate operations
 
 They return another Stream.
 
@@ -327,7 +327,7 @@ skip
 
 Example: stream() .filter(...) .map(...) .sorted(...)
 
-Terminal operations
+2) Terminal operations
 
 They finish the Stream.
 
