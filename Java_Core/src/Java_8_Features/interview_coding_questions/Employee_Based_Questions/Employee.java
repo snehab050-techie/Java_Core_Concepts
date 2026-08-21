@@ -96,5 +96,19 @@ class Demo{
                 .max(Comparator.comparing(Employee::getSalary)).get().getName();
 
         System.out.println("Employee with highest paid salary: "+empName);
+
+        //Sort employees by salary ASC order
+        System.out.println("---------ASC order");
+        empDetails.values()
+                .stream()
+                .sorted(Comparator.comparing(Employee::getSalary))
+                .forEach(System.out::println);
+
+        //Sort employees by salary ASC order Desc order
+        System.out.println("---------DESC order");
+        empDetails.values()
+                .stream()
+                .sorted(Comparator.comparing(Employee::getSalary,Comparator.reverseOrder()))
+                .forEach(System.out::println);
     }
 }
