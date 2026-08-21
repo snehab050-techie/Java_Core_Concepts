@@ -34,6 +34,10 @@ public class Employee {
     public int getSalary() {
         return this.empSalary;
     }
+
+    public String getDepartment() {
+        return this.empDepartment;
+    }
 }
 
 class Demo{
@@ -43,7 +47,7 @@ class Demo{
         empDetails.put(1,new Employee(101,"Sneha","IT",75000));
         empDetails.put(2,new Employee(102,"Suhas","ME",70000));
         empDetails.put(3,new Employee(103,"Janu","IT",45000));
-        empDetails.put(4,new Employee(103,"Basu","IT",85000));
+        empDetails.put(4,new Employee(103,"Basu","ME",85000));
 
         empDetails.forEach(
                 (i,emp) -> {
@@ -110,5 +114,16 @@ class Demo{
                 .stream()
                 .sorted(Comparator.comparing(Employee::getSalary,Comparator.reverseOrder()))
                 .forEach(System.out::println);
+
+        //Group employees by department
+        //Collectors.groupingBy()
+        System.out.println("--------");
+        Map<String,List<Employee>> gemps = empDetails.values()
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment));
+
+        gemps.forEach(
+                (k,v) -> System.out.println("Dept: "+k+" - employees: "+v)
+        );
     }
 }
