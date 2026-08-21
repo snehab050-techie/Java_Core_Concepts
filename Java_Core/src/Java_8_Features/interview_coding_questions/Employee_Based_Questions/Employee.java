@@ -1,9 +1,7 @@
 package Java_8_Features.interview_coding_questions.Employee_Based_Questions;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Employee {
 
@@ -27,6 +25,14 @@ public class Employee {
                 ", empDepartment='" + empDepartment + '\'' +
                 ", empSalary=" + empSalary +
                 '}';
+    }
+
+    public String getName() {
+        return this.empName;
+    }
+
+    public int getSalary() {
+        return this.empSalary;
     }
 }
 
@@ -71,5 +77,24 @@ class Demo{
         while (e.hasNext()){
             System.out.println(e.next().empName);
         }
+
+        //alternative method to fetch all emp names
+        System.out.println("-----------");
+        Iterator<String> ename = empDetails.values()
+                .stream()
+                .map(Employee::getName)
+                .collect(Collectors.toList())
+                .iterator();
+
+        while(ename.hasNext()){
+            System.out.println(ename.next());
+        }
+
+        //Find highest paid employee
+        String empName = empDetails.values()
+                .stream()
+                .max(Comparator.comparing(Employee::getSalary)).get().getName();
+
+        System.out.println("Employee with highest paid salary: "+empName);
     }
 }
