@@ -61,5 +61,16 @@ class Demo{
        while(it.hasNext()){
            System.out.println(it.next().empName);
        }
+
+       //fetch all emp names
+        System.out.println("---fetch all emp names---");
+        List<Employee> empList = empDetails.values()
+                .stream()
+                .toList();
+
+        Iterator<Employee> e = empList.iterator();
+        while (e.hasNext()){
+            System.out.println(e.next().empName);
+        }
     }
 }
