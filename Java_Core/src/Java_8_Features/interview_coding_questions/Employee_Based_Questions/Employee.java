@@ -39,7 +39,6 @@ class Demo{
         empDetails.put(3,new Employee(103,"Janu","IT",45000));
         empDetails.put(4,new Employee(103,"Basu","IT",85000));
 
-
         empDetails.forEach(
                 (i,emp) -> {
                     System.out.println(i+" - "+emp);
