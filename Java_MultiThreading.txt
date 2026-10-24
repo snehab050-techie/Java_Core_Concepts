@@ -102,3 +102,90 @@ That's DEADLOCK.
 One-line memory: "I have what you need, and you have what I need."
 
 A lock is like a key that a thread needs before entering a protected section of code.
+
+------------------------------
+
+# Runnable vs Callable in Java
+
+1. Why do we need Runnable and Callable?
+
+In Java, a Thread is a worker that executes a task.
+
+Runnable and Callable are interfaces used to represent tasks that can be executed by another thread.
+
+- Runnable: Used when a task performs an action but does not return a result.
+- Callable: Used when a task performs an action and returns a result.
+
+2. Difference between Runnable and Callable
+
+| Runnable                                    | Callable                     |
+
+| Introduced before Java 5                    | Introduced in Java 5         |
+| Does not return a result                    | Returns a result             |
+| Method: run()                               | Method: call()               |
+| Return type: void                           | Return type: V (generic type)|
+| Cannot throw checked exceptions directly    | Can throw checked exceptions |
+| Can be used with Thread and ExecutorService | Used with ExecutorService    |
+
+3. Examples
+
+Runnable - No return value
+
+-java
+Runnable task = () -> {
+    System.out.println("Sending email");
+};
+
+new Thread(task).start();
+
+Here, the task performs an action but does not return anything.
+
+Callable - Returns a value
+
+-java
+Callable<Integer> task = () -> {
+    return 50000;
+};
+
+Here, the task returns an Integer value.
+
+To execute it:
+
+-java
+ExecutorService executor =
+    Executors.newSingleThreadExecutor();
+
+Future<Integer> future = executor.submit(task);
+
+Integer salary = future.get();
+
+System.out.println(salary);
+
+executor.shutdown();
+
+Output:
+50000
+
+4. Important concepts
+
+ExecutorService: Manages task execution using threads. It allows us to submit Runnable and Callable tasks.
+
+Future: Represents the result of an asynchronous computation. We can use get() to retrieve the result. It waits if the result is not ready.
+
+Callable: Its call() method can throw checked exceptions, unlike Runnable's run() method.
+
+5. Interview-ready answer
+
+Runnable and Callable are interfaces used to represent tasks that can be executed by another thread.
+
+The main difference is that Runnable does not return a result, whereas Callable returns a result.
+
+Runnable has the run() method with a void return type, while Callable has the call() method that returns a value of type V.
+
+Runnable cannot throw checked exceptions directly, whereas Callable can throw checked exceptions.
+
+Runnable is suitable for tasks like sending emails, while Callable is useful for tasks like calculating salary when the result is required.
+
+Callable is generally submitted to an ExecutorService, and its result can be retrieved using Future.
+
+Remember: Runnable = Do something. Callable = Do something and return a result.
