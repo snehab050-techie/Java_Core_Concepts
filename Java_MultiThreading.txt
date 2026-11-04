@@ -189,3 +189,40 @@ Runnable is suitable for tasks like sending emails, while Callable is useful for
 Callable is generally submitted to an ExecutorService, and its result can be retrieved using Future.
 
 Remember: Runnable = Do something. Callable = Do something and return a result.
+
+--------------------
+
+What is a thread?
+
+Difference between process and thread.
+
+How can we create a thread in Java?
+
+Difference between Runnable and Callable
+
+Difference between start() and run().
+
+What is synchronization?
+
+What is the synchronized keyword?
+
+What is the volatile keyword?
+
+What is a race condition?
+
+What is deadlock? How do you prevent it?
+
+What is ExecutorService?
+
+Difference between wait(), notify() and sleep().
+
+What is ThreadPool?
+What is ConcurrentHashMap and why is it useful?
+
+Explain JVM memory areas.
+
+What is garbage collection?
+
+What causes OutOfMemoryError?
+
+What is StackOverflowError?
