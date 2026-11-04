@@ -1,0 +1,97 @@
+What is the Java Collections Framework?
+
+
+
+Difference between Collection and Collections.
+
+
+
+Explain the Collections Framework hierarchy.
+
+
+
+Difference between List, Set and Map.
+
+
+
+Difference between ArrayList and LinkedList.
+
+
+
+Difference between ArrayList and Vector.
+
+
+
+Difference between HashSet and TreeSet.
+
+
+
+Difference between HashMap and Hashtable.
+
+
+
+Difference between HashMap and ConcurrentHashMap.
+
+
+
+Difference between HashMap and TreeMap.
+
+
+
+How does HashMap work internally?
+
+
+
+What is hashing?
+
+
+
+What is a hash collision? How is it handled?
+
+
+
+What is the default capacity and load factor of HashMap?
+
+
+
+What happens when HashMap reaches its load factor threshold?
+
+
+
+Why should we override equals() and hashCode() together?
+
+
+
+Can HashMap contain null keys and values?
+
+
+
+Can HashSet contain duplicates?
+
+
+
+What is an Iterator?
+
+
+
+Difference between Iterator and ListIterator.
+
+
+
+What is ConcurrentModificationException?
+
+
+
+What is fail-fast and fail-safe iteration?
+
+
+
+Difference between Comparable and Comparator.
+
+
+
+How do you sort a list of employees by salary?
+
+
+
+When would you use ConcurrentHashMap?
