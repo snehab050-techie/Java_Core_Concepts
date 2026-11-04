@@ -1,0 +1,77 @@
+What is Java? What are its main features?
+
+
+
+Difference between JDK, JRE and JVM.
+
+
+
+Why is Java platform independent?
+
+
+
+What is bytecode?
+
+
+
+Difference between primitive and non-primitive data types.
+
+
+
+What are wrapper classes?
+
+
+
+What is autoboxing and unboxing?
+
+
+
+Difference between == and .equals()?
+
+
+
+Why is String immutable in Java?
+
+
+
+What is the String Constant Pool?
+
+
+
+Difference between String, StringBuilder and StringBuffer.
+
+
+
+What is the difference between final, finally and finalize()?
+
+
+
+Is Java pass-by-value or pass-by-reference?
+
+
+
+What is a static variable, static method and static block?
+
+
+
+Can we overload the main method?
+
+
+
+Can a static method be overridden?
+
+
+
+What are constructors? Can constructors be overloaded?
+
+
+
+What is the difference between this and super?
+
+
+
+What is an immutable class? How do you create one?
+
+
+
+What is garbage collection?
