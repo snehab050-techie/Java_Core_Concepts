@@ -105,3 +105,57 @@ Can we have multiple catch blocks?
 
 
 What happens if an exception occurs inside a finally block?
+
+What are the four pillars of OOPS?
+
+
+
+What is encapsulation? Give a real-world example.
+
+
+
+What is abstraction?
+
+
+
+Difference between abstraction and encapsulation.
+
+
+
+What is inheritance? What types of inheritance exist?
+
+
+
+Why doesn't Java support multiple inheritance through classes?
+
+
+
+What is polymorphism?
+
+
+
+Difference between compile-time and runtime polymorphism.
+
+
+
+Difference between method overloading and method overriding.
+
+
+
+Difference between abstract class and interface.
+
+
+
+Can an interface have default and static methods?
+
+
+
+Can an abstract class have a constructor?
+
+
+
+What is runtime dynamic method dispatch?
+
+
+
+What is composition? How is it different from inheritance?
