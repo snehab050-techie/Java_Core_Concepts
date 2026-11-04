@@ -75,3 +75,33 @@ What is an immutable class? How do you create one?
 
 
 What is garbage collection?
+
+What is the difference between heap and stack memory?
+
+
+
+What are checked and unchecked exceptions?
+
+
+
+Difference between throw and throws.
+
+
+
+What is a custom exception?
+
+
+
+What is try-with-resources?
+
+
+
+What is the difference between Error and Exception?
+
+
+
+Can we have multiple catch blocks?
+
+
+
+What happens if an exception occurs inside a finally block?
