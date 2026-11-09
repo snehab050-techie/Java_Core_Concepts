@@ -44,7 +44,7 @@ Volatile keyword - ensures that when one thread updates a variable, all other th
 
                    volatile tells Java: "Don't let threads use stale cached values for this variable. Always read the latest value from shared memory."
 
--------------------------------
+----------------------------------------
 
 1) What is a Thread?
 A thread is the smallest unit of execution within a process.
@@ -91,7 +91,7 @@ Think of two people and two keys.
 
 Both say:
 
-"I'll give you mine once you give me yours."
+"I will give you mine once you give me yours."
 
 Nobody gives anything.
 
