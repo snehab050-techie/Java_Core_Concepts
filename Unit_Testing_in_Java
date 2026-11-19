@@ -7,3 +7,9 @@ While JUnit provides the core test runner and structure, developers often pair i
 > Mockito. The standard mocking framework used to replace external dependencies (like databases or APIs) with simulated objects so you can test a class in isolation.
 > AssertJ. A fluent assertion library that offers more readable, expressive checks than standard JUnit assertions.
 > TestNG. An alternative testing framework to JUnit, often used for complex test configurations and parallel execution.
+
+
+Anatomy of a Basic JUnit Test
+
+In standard Java projects (using Maven or Gradle), tests live in the src/test/java directory, 
+mirroring the package structure of your main code in src/main/java.
