@@ -13,3 +13,42 @@ Anatomy of a Basic JUnit Test
 
 In standard Java projects (using Maven or Gradle), tests live in the src/test/java directory, 
 mirroring the package structure of your main code in src/main/java.
+
+Example:
+
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+A unit test class (CalculatorTest.java) typically follows the Arrange-Act-Assert (or Given-When-Then) pattern:
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+class CalculatorTest {
+
+    @Test
+    void testAddTwoNumbers() {
+        // 1. Arrange: Set up the object and test inputs
+        Calculator calculator = new Calculator();
+
+        // 2. Act: Call the method being tested
+        int result = calculator.add(2, 3);
+
+        // 3. Assert: Verify the output matches expectations
+        assertEquals(5, result, "2 + 3 should equal 5");
+    }
+}
+
+
+Key JUnit Annotations & Assertions
+
+JUnit relies on annotations to manage the test lifecycle and assertion methods to validate outcomes.
+• @Test. Marks a method as an executable test case.
+• @BeforeEach / @AfterEach. Runs setup or cleanup code before and after every individual @Test method in the class.
+• @BeforeAll / @AfterAll. Runs one-time setup or teardown logic once for the entire test class.
+• assertEquals(expected, actual). Checks that two values are equal.
+• assertTrue(condition) / assertFalse(condition). Verifies boolean outcomes.
+• assertThrows(Exception.class, () -> ...). Confirms that a method throws the expected exception under invalid conditions.
