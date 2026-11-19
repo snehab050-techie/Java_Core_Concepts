@@ -1,1 +1,3 @@
 
+Unit testing in Java is the practice of testing the smallest individual parts of an application—typically single methods or classes—in isolation to 
+verify they behave as expected. The industry-standard framework for writing and running these automated tests is JUnit.
