@@ -52,3 +52,12 @@ JUnit relies on annotations to manage the test lifecycle and assertion methods t
 • assertEquals(expected, actual). Checks that two values are equal.
 • assertTrue(condition) / assertFalse(condition). Verifies boolean outcomes.
 • assertThrows(Exception.class, () -> ...). Confirms that a method throws the expected exception under invalid conditions.
+
+
+Best Practices for Effective Unit Tests
+
+• Test in isolation. Mock external services, databases, or network calls using Mockito so your tests run quickly and only fail when the specific unit's logic breaks.
+• Cover edge cases. Write separate test methods for valid inputs, boundary values, null inputs, and expected error conditions.
+• Keep tests independent. Ensure tests do not rely on the execution order or shared state left behind by other tests.
+• Automate execution. Integrate tests into your build tools (Maven/Gradle) and CI/CD pipelines so they run automatically on every code commit.
+For a visual walkthrough of setting up and writing your first JUnit 5 tests in IntelliJ IDEA
