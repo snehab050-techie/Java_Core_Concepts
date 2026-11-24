@@ -8,7 +8,19 @@ OR
 
 Thread is a worker that performs a task inside our application
 
+Process
+--------
 
+Processes are usually independent, while threads exist as subsets of a process
+
+A process is an independent program in execution with its own separate memory space
+A thread is a smaller unit of execution within that process.
+
+Why do we need threads?
+
+Threads make run application faster by executing tasks simultaneously
+
+Response becomes faster - the user don't have to wait for longer time
 
 There are mainly two ways implement MultiThreading in Java
 ----------------------------------
