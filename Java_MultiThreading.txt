@@ -46,7 +46,14 @@ Volatile keyword - ensures that when one thread updates a variable, all other th
 
 ----------------------------------------
 
+1) What is a Thread?
+A thread is the smallest unit of execution within a process.
+Multiple threads allow different tasks to run concurrently, making applications more responsive and efficient.
 
+2) Why do we use Threads?
+Threads improve performance by allowing multiple tasks to execute concurrently.
+For example, in a web application, one thread can handle a user request while another sends an email or writes logs,
+so users don't have to wait unnecessarily.
 
 3) Difference between Process and Thread
 Process	                                   Thread
