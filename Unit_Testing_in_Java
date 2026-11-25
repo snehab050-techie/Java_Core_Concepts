@@ -1,6 +1,11 @@
+Unit testing in Java is the practice of testing the smallest individual parts of an application—typically single methods or classes—in isolation to 
+verify they behave as expected. The industry-standard framework for writing and running these automated tests is JUnit.
 
-
-
+While JUnit provides the core test runner and structure, developers often pair it with specialized libraries.
+> JUnit. The de facto testing framework for Java. JUnit 5 (Jupiter) and JUnit 6 provide modern annotations and test execution engines.
+> Mockito. The standard mocking framework used to replace external dependencies (like databases or APIs) with simulated objects so you can test a class in isolation.
+> AssertJ. A fluent assertion library that offers more readable, expressive checks than standard JUnit assertions.
+> TestNG. An alternative testing framework to JUnit, often used for complex test configurations and parallel execution.
 
 Anatomy of a Basic JUnit Test
 
