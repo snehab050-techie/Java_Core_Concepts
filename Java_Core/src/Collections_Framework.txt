@@ -1,12 +1,4 @@
-What is the Java Collections Framework?
 
-
-
-Difference between Collection and Collections.
-
-
-
-Explain the Collections Framework hierarchy.
 
 
 
